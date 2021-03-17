@@ -65,7 +65,7 @@
 				echo "<p>Tipe data bukan string</p>";
 			}
 		}
-		 
+		 //komentar perubahan
 		?>
 		</div>
 	</div>
