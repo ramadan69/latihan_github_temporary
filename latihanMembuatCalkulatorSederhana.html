@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Sedehana</title>
+</head>
+
+<body>
+    <input type="text" id="textBil1" />
+    <label id="resultOp"></label>
+    <input type="text" id="textBil2" /><br>
+    <label id="resultHsl"></label><br>
+    <button id="btnTambah" onclick="prosesTambah()">+</button>
+    <button id="btnKurang" onclick="prosesKurang()">-</button>
+    <button id="btnKali" onclick="prosesKali()">X</button>
+    <button id="btnBagi" onclick="prosesBagi()">/</button>
+    <button id="btnHapus" onclick="prosesHapus()">C</button>
+    <button id="btnZ" value="Z" onclick="proses()">Z</button>
+    <button id="btnN" value="N" onclick="proses()">N</button>
+
+    <script>
+        // bil1 = const text = document.getElementById('textBil1').value;
+        // bil2 = const text = document.getElementById('textBil2').value;
+        function prosesTambah() {
+            const bil1 = document.getElementById('textBil1').value;
+            const bil2 = document.getElementById('textBil2').value;
+            document.getElementById('resultOp').innerHTML = '+';
+            const Hsl = parseInt(bil1) + parseInt(bil2);
+            document.getElementById('resultHsl').innerHTML = Hsl;
+
+
+        }
+        function prosesKurang() {
+            const bil1 = document.getElementById('textBil1').value;
+            const bil2 = document.getElementById('textBil2').value;
+            document.getElementById('resultOp').innerHTML = '-';
+            const Hsl = parseInt(bil1) - parseInt(bil2);
+            document.getElementById('resultHsl').innerHTML = Hsl;
+
+
+        }
+        function prosesKali() {
+            const bil1 = document.getElementById('textBil1').value;
+            const bil2 = document.getElementById('textBil2').value;
+            document.getElementById('resultOp').innerHTML = '*';
+            const Hsl = parseInt(bil1) * parseInt(bil2);
+            document.getElementById('resultHsl').innerHTML = Hsl;
+
+
+
+        }
+        function prosesBagi() {
+            const bil1 = document.getElementById('textBil1').value;
+            const bil2 = document.getElementById('textBil2').value;
+            document.getElementById('resultOp').innerHTML = '/';
+            const Hsl = parseInt(bil1) / parseInt(bil2);
+            document.getElementById('resultHsl').innerHTML = Hsl;
+
+
+        }
+        function prosesHapus() {
+            const tambah = document.getElementById('btnHapus').innerHTML;
+            document.getElementById('resultOp').innerHTML = '';
+            document.getElementById('resultHsl').innerHTML = '';
+            document.getElementById('textBil1').value = '';
+            document.getElementById('textBil2').value = '';
+        }
+
+        function proses() {
+            const bil1 = document.getElementById('textBil1').value;
+            const bil2 = document.getElementById('textBil2').value;
+            const tombol = document.getElementById('btnZ').value;
+            const tombol = document.getElementById('btnN').value;
+            
+            const Hsl = parseInt(bil1) / parseInt(bil2);
+            alert(tombol);
+
+        }
+    </script>
+</body>
+
+</html>

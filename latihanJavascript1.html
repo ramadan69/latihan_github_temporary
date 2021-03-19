@@ -1,0 +1,31 @@
+<body>
+    <h1>contoh penulisan JavaScript</h1>
+    <p id="demo">ini adalah text awal</p>
+    <button id="btn" onclick="ubahText()">Ganti</button>
+    <button onclick="tesWrite().getElementById">write</button>
+    <button onclick="showAlert().getElementById">Tampilkan alert</button>
+    <button onclick="showConsole().getElementById">Tampilkan Console</button>
+    
+    <script>
+    function ubahText(){
+    var text = document.getElementById('demo').innerHTML;
+    if(text == 'ini adalah text awal'){
+        document.getElementById('demo').innerHTML = 'Setelah dimodif oleh javasript';
+        document.getElementById('btn').innerHTML = 'kembali';
+    }else{
+        document.getElementById('demo').innerHTML = 'ini adalah text awal';
+        document.getElementById('btn').innerHTML = 'ganti';
+    }
+    }
+    function tesWrite(){
+        document.write('Tes Write');
+    }
+    function showAlert(){
+        alert('hallo');
+    }
+
+    function showConsole(){
+        console.log(5+8)
+    }
+    </script>
+    </body>
